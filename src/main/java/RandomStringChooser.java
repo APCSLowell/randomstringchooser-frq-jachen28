@@ -1,26 +1,25 @@
 import java.util.*;
-public class RandomStringChooser {
-    private String[] availableStrings;
-    private int nextIndex;
-
-    public RandomStringChooser(String[] wordArray) {
-        availableStrings = new String[wordArray.length];
-        for (int i = 0; i < availableStrings.length; i++) {
-            availableStrings[i] = wordArray[i];
-        }
-        nextIndex = 0;
+public class RandomLetterChooser{
+public RandomLetterChooser(String str)
+    { 
+    String[] newArray = RandomLetterChooser.getSingleLetter(str);
+    super (newArray);
     }
+public RandomStringChooser(String [] wordArray){
+availability = new boolean[wordArray.length];
+stringChooser = wordArray;
+for(int i = 0; i < availability.length; i++)
+availability[i]  = true;
+}
 
-    public String getNext() {
-        if (nextIndex >= availableStrings.length) {
-            return "NONE";
-        } else {
-            int randomIndex = (int) (Math.random() * (availableStrings.length - nextIndex)) + nextIndex;
-            String chosenString = availableStrings[randomIndex];
-            availableStrings[randomIndex] = availableStrings[nextIndex];
-            availableStrings[nextIndex] = chosenString;
-            nextIndex++;
-            return chosenString;
-        }
-    }
+public String getNext(){
+int randomIndex = (int)(Math.random() * availability.length);
+if(availability[randomIndex] == true){
+availability[randomIndex] = false;
+return stringChooser[randomIndex];
+}
+else {
+return "NONE";
+}
+}
 }

@@ -1,10 +1,8 @@
 import java.util.*;
 public class RandomLetterChooser{
-public RandomLetterChooser(String str)
-    { 
-    String[] newArray = RandomLetterChooser.getSingleLetter(str);
-    super (newArray);
-    }
+private String[] stringChooser;
+private boolean[] availability;
+    
 public RandomStringChooser(String [] wordArray){
 availability = new boolean[wordArray.length];
 stringChooser = wordArray;

@@ -1,18 +1,21 @@
 import java.util.*;
-public class RandomStringChooser
-{
-  private String[] availableStrings;
-  private int nextIndex;
-  
-  public void RandomStringChooser(String[] wordArray){
-    availableStrings = new String[wordArray.length];
-    for(int i = 0; i < availableStrings.length; i++){
-      availableStrings[i] = wordArray[i];
-    }
-    nextIndex = 0;
-  }
+public RandomStringChooser{
+private String[] stringChooser;
+private String[] availability;
 
-  public String getNext(){
-  
-  }
+public RandomStringChooser(String [] wordArray){
+availability = new String[wordArray.length];
+stringChooser = wordArray;
+for(int i = 0; i < availability.length; i++)
+availability  = "available";
+}
+
+public String getNext(){
+int randomIndex = (int)(Math.random() * availability.length)
+if(availability[randomIndex].equals("available"){
+return stringChooser[randomIndex];
+else {
+return "None";
+}
+}
 }

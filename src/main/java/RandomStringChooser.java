@@ -16,7 +16,7 @@ if(availability[randomIndex].equals("available"){
 availability[randomIndex] = "false";
 return stringChooser[randomIndex];
 else {
-return "None";
+return "NONE";
 }
 }
 }

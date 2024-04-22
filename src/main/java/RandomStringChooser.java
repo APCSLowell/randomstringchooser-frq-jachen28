@@ -1,9 +1,9 @@
 import java.util.*;
-public class RandomLetterChooser{
+public class RandomStringChooser{
 private String[] stringChooser;
 private boolean[] availability;
     
-public void RandomStringChooser(String [] wordArray){
+public RandomStringChooser(String [] wordArray){
 availability = new boolean[wordArray.length];
 stringChooser = wordArray;
 for(int i = 0; i < availability.length; i++)

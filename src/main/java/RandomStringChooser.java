@@ -4,7 +4,7 @@ private String[] stringChooser;
 private boolean[] availability;
 
 public RandomStringChooser(String [] wordArray){
-availability = new String[wordArray.length];
+availability = new boolean[wordArray.length];
 stringChooser = wordArray;
 for(int i = 0; i < availability.length; i++)
 availability[i]  = true;

@@ -1,20 +1,21 @@
 import java.util.*;
 public RandomStringChooser{
 private String[] stringChooser;
-private String[] availability;
+private boolean[] availability;
 
 public RandomStringChooser(String [] wordArray){
 availability = new String[wordArray.length];
 stringChooser = wordArray;
 for(int i = 0; i < availability.length; i++)
-availability  = "available";
+availability[i]  = true;
 }
 
 public String getNext(){
 int randomIndex = (int)(Math.random() * availability.length)
-if(availability[randomIndex].equals("available"){
-availability[randomIndex] = "false";
+if(availability[randomIndex] == true){
+availability[randomIndex] = false;
 return stringChooser[randomIndex];
+}
 else {
 return "NONE";
 }

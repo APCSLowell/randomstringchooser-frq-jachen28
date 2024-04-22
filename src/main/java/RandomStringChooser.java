@@ -11,7 +11,7 @@ public class RandomStringChooser {
     }
 
     public String getNext() {
-        if (availableStrings.isEmpty()) {
+        if (availableStrings == 0) {
             return "NONE";
         }
         int randomIndex = (int)(Math.random() * availableStrings.size());

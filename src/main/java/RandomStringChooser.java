@@ -3,7 +3,6 @@ public class RandomStringChooser {
     private String[] availableStrings;
     private int nextIndex;
 
-    // Constructor
     public RandomStringChooser(String[] wordArray) {
         availableStrings = new String[wordArray.length];
         for (int i = 0; i < availableStrings.length; i++) {
@@ -12,7 +11,6 @@ public class RandomStringChooser {
         nextIndex = 0;
     }
 
-    // Method to get the next random string
     public String getNext() {
         if (nextIndex >= availableStrings.length) {
             return "NONE";

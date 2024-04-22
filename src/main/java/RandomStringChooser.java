@@ -1,8 +1,18 @@
 import java.util.*;
 public class RandomStringChooser
 {
-  /* to be implemented in part (a) */
+  private String[] availableStrings;
+  private int nextIndex;
   
-  //Heads up! 
-  //You will get a very confusing error message until you have working code in part b as well
+  public void RandomStringChooser(String[] wordArray){
+    availableStrings = new String[wordArray.length];
+    for(int i = 0; i < availableStrings.length; i++){
+      availableStrings[i] = wordArray[i];
+    }
+    nextIndex = 0;
+  }
+
+  public String getNext(){
+  
+  }
 }

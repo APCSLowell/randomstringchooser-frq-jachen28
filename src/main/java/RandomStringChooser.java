@@ -15,6 +15,6 @@ public class RandomStringChooser {
             return "NONE";
         }
         int randomIndex = (int)(Math.random() * availableStrings.size());
-        return available.remove(randomIndex);
+        return availableStrings.remove(randomIndex);
     }
 }

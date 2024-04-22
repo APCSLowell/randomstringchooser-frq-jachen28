@@ -11,7 +11,7 @@ availability[i]  = true;
 }
 
 public String getNext(){
-int randomIndex = (int)(Math.random() * availability.length)
+int randomIndex = (int)(Math.random() * availability.length);
 if(availability[randomIndex] == true){
 availability[randomIndex] = false;
 return stringChooser[randomIndex];

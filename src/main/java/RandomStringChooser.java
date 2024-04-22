@@ -3,7 +3,7 @@ public class RandomLetterChooser{
 private String[] stringChooser;
 private boolean[] availability;
     
-public RandomStringChooser(String [] wordArray){
+public void RandomStringChooser(String [] wordArray){
 availability = new boolean[wordArray.length];
 stringChooser = wordArray;
 for(int i = 0; i < availability.length; i++)

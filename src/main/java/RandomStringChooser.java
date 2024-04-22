@@ -13,6 +13,7 @@ availability  = "available";
 public String getNext(){
 int randomIndex = (int)(Math.random() * availability.length)
 if(availability[randomIndex].equals("available"){
+availability[randomIndex] = "false";
 return stringChooser[randomIndex];
 else {
 return "None";

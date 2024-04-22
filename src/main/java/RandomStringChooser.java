@@ -17,7 +17,7 @@ public class RandomStringChooser {
             availability[randomIndex] = "used"; // Mark the string as used
             return stringChooser[randomIndex];
         } else {
-            return "None";
+            return "NONE";
         }
     }
 }
